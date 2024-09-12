@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main(){
+	
+	int guess_num;
+	srand(time(NULL));
+	int secret_num=rand() % 10;
+    int guess_limit=5;
+	int i;
+	
+    printf("can you guess the correct number ? \n");
+
+	for(i=1;i<=guess_limit;i++)
+	{
+			printf("Enter your guess : ");
+	        scanf("%i",&guess_num);
+	        
+		if(guess_num == secret_num){
+		printf("You won !!!\n");
+		return 0;
+	    }
+		
+		else{
+		printf("wrong answer . try again !!!\n");
+	    }
+	
+	}
+	
+	if(i>guess_limit){
+			printf(" You Lose !!!\n");
+	}
+
+	
+return 0;
+}
